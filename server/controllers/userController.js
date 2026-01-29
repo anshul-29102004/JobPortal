@@ -1,6 +1,6 @@
-import expressAsyncHandler from "express-async-handler";
+import asyncHandler from "express-async-handler";
 import {toast} from 'react-toastify'
-import User from "./models/UserModel.js"
+import User from "../models/UserModel.js"
 
 
 export const getUserProfile=asyncHandler(async(req,res)=>{

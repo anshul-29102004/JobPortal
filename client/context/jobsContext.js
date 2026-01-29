@@ -3,7 +3,7 @@ import { useContext,createContext } from 'react'
 import { children } from 'react'
 import { useGlobalContext } from './globalContext'
 import { ToastContainer, toast } from 'react-toastify';
-
+import axios from 'axios';
 
 const JobsContext=createContext()
 
@@ -149,7 +149,7 @@ export const JobsContextProvider=({children})=>{
         searchJobs,
         getJobById,
         likeJob,
-        applyToJob,
+        applyJob,
         deleteJob,
       
     }}>{children}</JobsContext.Provider>
