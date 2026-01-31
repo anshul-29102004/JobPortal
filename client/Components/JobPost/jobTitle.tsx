@@ -1,7 +1,6 @@
 "use client";
 import { useGlobalContext } from "@/context/globalContext";
 import { Separator } from "@/Components/ui/separator";
-
 import React, { useEffect } from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
