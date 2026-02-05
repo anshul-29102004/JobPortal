@@ -15,7 +15,6 @@ import { useGlobalContext } from "@/context/globalContext";
 import { Badge } from "./ui/badge";
 
 function Profile() {
-  
   const { userProfile } = useGlobalContext();
 
   const { profilePicture, name, profession, email } = userProfile;
@@ -54,7 +53,7 @@ function Profile() {
         <DropdownMenuItem
           className="cursor-pointer"
           onClick={() => {
-            router.push("http://localhost:8000/logout");
+            router.push("https://jobfindr-q1cl.onrender.com/logout");
           }}
         >
           <LogOut className="mr-2 h-4 w-4" />

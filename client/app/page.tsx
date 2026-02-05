@@ -1,5 +1,4 @@
 "use client";
-
 import Footer from "@/Components/Footer";
 import Header from "@/Components/Header";
 import { Badge } from "@/Components/ui/badge";
@@ -161,8 +160,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer/>
-
+      <Footer />
     </main>
   );
 }

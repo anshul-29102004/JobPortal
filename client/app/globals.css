@@ -1,9 +1,7 @@
-@reference "tailwindcss";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+/* =======================
+   TAILWIND v4 IMPORT
+======================= */
+@import "tailwindcss";
 
 /* =======================
    CSS VARIABLES (THEME)
@@ -70,6 +68,7 @@
 ======================= */
 @layer base {
   * {
+    border-style: solid;
     border-color: hsl(var(--border));
   }
 
@@ -79,8 +78,8 @@
   }
 }
 
-/* Override background if needed */
-body {
+/* Optional override (kept, but scoped properly) */
+body.override-bg {
   background: #f0f5fa;
 }
 
@@ -88,13 +87,11 @@ body {
    QUILL EDITOR STYLES
 ======================= */
 .custom-quill-editor .ql-toolbar {
-  @apply rounded-t-lg;
-  border: 1px solid #e2e8f0;
+  @apply rounded-t-lg border;
 }
 
 .custom-quill-editor .ql-container {
-  @apply rounded-bl-lg rounded-br-lg;
-  border: 1px solid #e2e8f0;
+  @apply rounded-b-lg border;
 }
 
 .custom-quill-editor .ql-editor {

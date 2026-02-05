@@ -7,9 +7,9 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 import { Separator } from "../ui/separator";
-import formatMoney from "@/utils/formatMoney";
-import { formatDates } from "@/utils/fotmatDates";
-import { bookmark, bookmarkEmpty } from "@/utils/Icons";
+import formatMoney from "@/client/formatMoney";
+import { formatDates } from "@/client/formatDates";
+import { bookmark, bookmarkEmpty } from "@/client/Icons";
 
 interface JobProps {
   job: Job;
@@ -103,7 +103,7 @@ function JobCard({ job, activeJob }: JobProps) {
           onClick={() => {
             isAuthenticated
               ? handleLike(job._id)
-              : router.push("/login");
+              : router.push("https://jobfindr-q1cl.onrender.com/login");
           }}
         >
           {isLiked ? bookmark : bookmarkEmpty}

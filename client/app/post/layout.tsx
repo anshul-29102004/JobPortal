@@ -5,7 +5,7 @@ import { useGlobalContext } from "@/context/globalContext";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 
-function page() {
+function PostLayout() {
   const { isAuthenticated, loading } = useGlobalContext();
   const router = useRouter();
 
@@ -13,7 +13,8 @@ function page() {
     if (!loading && !isAuthenticated) {
       router.push("https://jobfindr-q1cl.onrender.com/login");
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated, loading]);
+
   return (
     <div className="flex flex-col">
       <Header />
@@ -29,4 +30,4 @@ function page() {
   );
 }
 
-export default page;
+export default PostLayout;

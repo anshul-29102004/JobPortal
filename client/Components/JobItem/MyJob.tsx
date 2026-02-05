@@ -4,13 +4,13 @@ import { Job } from "@/types/types";
 import { useJobsContext } from "@/context/jobsContext";
 import Image from "next/image";
 import { CardTitle } from "../ui/card";
-import { formatDates } from "@/utils/fotmatDates";
+import { formatDates } from "@/client/formatDates";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { Pencil, Trash } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useGlobalContext } from "@/context/globalContext";
-import { bookmark, bookmarkEmpty } from "@/utils/Icons";
+import { bookmark, bookmarkEmpty } from "@/client/Icons";
 
 interface JobProps {
   job: Job;
@@ -71,7 +71,7 @@ function MyJob({ job }: JobProps) {
           onClick={() => {
             isAuthenticated
               ? handleLike(job._id)
-              : router.push("/login");
+              : router.push("https://jobfindr-q1cl.onrender.com/login");
           }}
         >
           {isLiked ? bookmark : bookmarkEmpty}
