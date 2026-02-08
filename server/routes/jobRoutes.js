@@ -13,7 +13,7 @@ import protect from "../middleware/protect.js";
 
 const router = express.Router();
 
-router.post("/jobs", protect, createJob);
+router.post("/jobs",createJob);
 router.get("/jobs", getJobs);
 router.get("/jobs/user/:id", protect, getJobsByUser);
 

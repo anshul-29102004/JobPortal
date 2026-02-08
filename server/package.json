@@ -10,12 +10,14 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "express-async-handler": "^1.2.0",
     "express-openid-connect": "^2.19.4",
+    "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.0.0",
     "mongoose": "^9.1.5",
     "nodemon": "^3.1.11"

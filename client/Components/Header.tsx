@@ -13,8 +13,8 @@ function Header() {
   return (
     <header className="px-10 py-6 bg-[#D7DEDC] text-gray-500 flex justify-between items-center">
       <Link href={"/"} className="flex items-center gap-2">
-        <Image src="/logo.svg" alt="logo" width={45} height={45} />
-        <h1 className="font-extrabold text-2xl text-[#7263f3]">JobFindr</h1>
+        <Image src="/nexthire.png" alt="logo" width={45} height={45} />
+        <h1 className="font-extrabold text-2xl text-[#7263f3]">NextHire</h1>
       </Link>
 
       <ul className="flex items-center gap-8">
@@ -49,8 +49,17 @@ function Header() {
           >
             Post a Job
           </Link>
-        </li>
+   </li>
       </ul>
+
+      <button onClick={() => { window.location.href = "http://localhost:3001/login";}}
+  className="px-4 py-2 bg-black text-white rounded"
+>
+  Admin Panel
+</button>
+
+
+
 
       <div className="flex items-center gap-4">
         {isAuthenticated ? (
@@ -58,14 +67,14 @@ function Header() {
         ) : (
           <div className="flex items-center gap-6">
             <Link
-              href={"https://jobfindr-q1cl.onrender.com/login"}
+              href={"http://localhost:8000/login"}
               className="py-2 px-6 rounded-md border flex items-center gap-4 bg-[#7263F3] text-white border-[#7263F3] hover:bg-[#7263F3]/90 trasition-all duration-200 ease-in-out"
             >
               <LogIn className="w-4 h-4" />
               Login
             </Link>
             <Link
-              href={"https://jobfindr-q1cl.onrender.com/login"}
+              href={"http://localhost:8000/login"}
               className="py-2 px-6 rounded-md border flex items-center gap-4 border-[#7263F3] text-[#7263F3] hover:bg-[#7263F3]/10 trasition-all duration-200 ease-in-out"
             >
               <UserPlus className="w-4 h-4" />
