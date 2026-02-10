@@ -46,11 +46,12 @@ const config = {
 ========================= */
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin: ["http://localhost:3000", "http://localhost:3001"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
 );
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

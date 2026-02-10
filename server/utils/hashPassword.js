@@ -1,10 +1,8 @@
-import bcrypt from "bcryptjs"
+import bcrypt from "bcryptjs";
 
-const password="qwerty123";
+const generateHash = async () => {
+  const hash = await bcrypt.hash("qwerty123", 10);
+  console.log(hash);
+};
 
-const generateHash=async(password)=>{
-    const hash=await bcrypt.hash(password,10);
-    return hash;
-    
-}
-
+generateHash();
